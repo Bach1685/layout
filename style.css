@@ -232,6 +232,7 @@ h6 {
 }
 .header-block__sub-title {
   color: #737373;
+  margin-bottom: 40px;
 }
 
 /* ------------------footer------------------------ */
@@ -392,6 +393,7 @@ h6 {
 }
 
 .item-service__icon {
+  display: flex;
 }
 
 .item-service__icon img {
@@ -412,6 +414,14 @@ h6 {
 .advantages {
   padding: 80px 0;
 }
+
+@media (max-width: 992px) {
+  .advantages {
+    padding: 30px 0;
+  }
+}
+
+
 .advantages__container {
 }
 .advantages__header {
@@ -419,24 +429,52 @@ h6 {
 }
 .advantages__body {
   display: flex;
-  margin: 0 -15px;
+  /* margin: 0 -15px -30px; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 .advantages__column {
-  padding: 0 15px;
+  /* padding: 0 15px 30px 0; */
   flex: 0 1 25%;
 }
+
+@media (max-width: 1020px) {
+  .advantages__column {
+    flex: 0 1 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .advantages__column {
+    flex: 0 1 100%;
+  }
+}
+
+
 .advantages__item {
   background-color: #fff;
-  padding: 30px 40px;
+  padding: 30px 0px;
   text-align: center;
+  font-weight: 700;
 }
 .advantages__icon {
+  height: 48px; /*ярлычки могут быть разными по высоте. Находим самый высокий*/
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 .advantages__icon img {
   width: 30px;
   height: 30px;
 }
 .advantages__value {
+  font-size: 40px;
+  line-height: 142%;
 }
 .advantages__text {
+  color: #737373;
+  font-size: 16px;
+  line-height: 150%;
 }
